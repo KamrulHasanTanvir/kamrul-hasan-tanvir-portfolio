@@ -5,80 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Md. Kamrul Hasan | Senior Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.7.0/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Animated gradient background */
+        .animate-gradient {
+            background: linear-gradient(270deg, #6B46C1, #D53F8C, #ECC94B);
+            background-size: 600% 600%;
+            animation: gradientMove 15s ease infinite;
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism card */
+        .glass-card {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        }
+    </style>
 </head>
 <body class="font-sans bg-gray-50 scroll-smooth">
 
 <!-- NAVBAR -->
-<header class="fixed w-full bg-gray-900 text-white z-50">
+<header class="fixed w-full bg-gray-900 text-white z-50 shadow-md">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
-        <a href="#" class="text-2xl font-bold">Kamrul Hasan</a>
+        <a href="#" class="text-2xl font-bold">Md. Kamrul Hasan</a>
         <nav class="space-x-6 hidden md:flex">
-            <a href="#hero" class="hover:text-yellow-400">Home</a>
-            <a href="#about" class="hover:text-yellow-400">About</a>
-            <a href="#skills" class="hover:text-yellow-400">Skills</a>
-            <a href="#experience" class="hover:text-yellow-400">Experience</a>
-            <a href="#projects" class="hover:text-yellow-400">Projects</a>
-            <a href="#certificates" class="hover:text-yellow-400">Certificates</a>
-            <a href="#payments" class="hover:text-yellow-400">Payments</a>
-            <a href="#contact" class="hover:text-yellow-400">Contact</a>
+            <a href="#hero" class="hover:text-yellow-400 transition">Home</a>
+            <a href="#about" class="hover:text-yellow-400 transition">About</a>
+            <a href="#skills" class="hover:text-yellow-400 transition">Skills</a>
+            <a href="#experience" class="hover:text-yellow-400 transition">Experience</a>
+            <a href="#projects" class="hover:text-yellow-400 transition">Projects</a>
+            <a href="#certificates" class="hover:text-yellow-400 transition">Certificates</a>
+            <a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a>
+            <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
         </nav>
     </div>
 </header>
 
 <!-- HERO -->
-<section id="hero" class="relative bg-gray-900 text-white h-screen flex flex-col justify-center items-center text-center">
-    <img src="assets/img/portfolio/kamrul-hasan-tanvir.JPG" alt="Md. Kamrul Hasan" class="rounded-full border-8 border-yellow-400 w-48 h-48 shadow-lg mb-6">
-    <h1 class="text-5xl md:text-6xl font-bold">Md. Kamrul Hasan</h1>
-    <h2 class="text-xl md:text-2xl mt-2">Senior Software Engineer (Fintech)</h2>
-    <p class="mt-4 text-lg">Building scalable payment systems handling <span class="text-yellow-400 font-bold">millions of transactions</span></p>
-    <div class="mt-6 space-x-4">
+<section id="hero" class="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+    <div class="absolute inset-0 animate-gradient"></div>
+    <img src="assets/img/portfolio/kamrul-hasan-tanvir.JPG" alt="Md. Kamrul Hasan" class="relative rounded-full border-8 border-white w-48 h-48 shadow-2xl z-10">
+    <h1 class="text-5xl md:text-6xl font-bold text-white mt-6 z-10">Md. Kamrul Hasan</h1>
+    <h2 class="text-xl md:text-2xl mt-2 text-white z-10">
+        <span id="typed-role" class="font-semibold"></span>
+    </h2>
+    <div class="mt-6 space-x-4 z-10">
         <a href="#projects" class="px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-500 transition">Projects</a>
         <a href="assets/img/kamrulHasanTanvir.pdf" download class="px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-gray-900 transition">Download CV</a>
     </div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed('#typed-role', {
+        strings: ['Senior Software Engineer', 'Fintech Specialist', 'API Developer', 'Open Source Contributor', 'Global Mentor'],
+        typeSpeed: 80,
+        backSpeed: 40,
+        loop: true
+    });
+</script>
+
 <!-- ABOUT -->
-<section id="about" class="py-20">
+<section id="about" class="py-20" data-aos="fade-up">
     <div class="container mx-auto px-6 text-center max-w-4xl">
         <h2 class="text-4xl font-bold mb-6">About Me</h2>
         <p class="text-gray-700 text-lg">
-            Senior Software Engineer with 5+ years of experience in fintech and scalable backend systems. Specialized in Laravel (PHP), RESTful APIs, and secure payment systems. Proven track record building high-performance applications handling millions of transactions annually. Strong understanding of PCI compliance, system optimization, and API design.
+            Senior Software Engineer with 5+ years of experience in fintech, scalable backend systems, and global API integrations. Expert in Laravel (PHP) and secure payment systems. Passionate about mentoring, building high-performance platforms, and contributing to open-source projects.
         </p>
     </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-20 bg-gray-100">
+<section id="skills" class="py-20 bg-gray-100" data-aos="fade-up">
     <div class="container mx-auto px-6 text-center max-w-5xl">
         <h2 class="text-4xl font-bold mb-10">Skills</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div>
+            <div class="glass-card p-6">
                 <h3 class="text-xl font-semibold mb-4">Backend</h3>
                 <div class="flex flex-wrap justify-center gap-3">
-                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">PHP (OOP, MVC)</span>
+                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">PHP</span>
                     <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">Laravel</span>
-                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">REST API</span>
-                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">CodeIgniter</span>
                 </div>
             </div>
-            <div>
+            <div class="glass-card p-6">
                 <h3 class="text-xl font-semibold mb-4">Frontend</h3>
                 <div class="flex flex-wrap justify-center gap-3">
+                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">Bootstrap v5.0</span>
                     <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">JavaScript</span>
-                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">jQuery</span>
-                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">Bootstrap</span>
-                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">UI/UX Basics</span>
                 </div>
             </div>
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Database & Payment</h3>
+            <div class="glass-card p-6">
+                <h3 class="text-xl font-semibold mb-4">Database</h3>
                 <div class="flex flex-wrap justify-center gap-3">
                     <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">MySQL</span>
                     <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">PostgreSQL</span>
-                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">Stripe</span>
-                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">PayPal</span>
-                    <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full">PCI Compliance</span>
                 </div>
             </div>
         </div>
@@ -86,7 +118,7 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="py-20">
+<section id="experience" class="py-20" data-aos="fade-up">
     <div class="container mx-auto px-6 max-w-5xl">
         <h2 class="text-4xl font-bold text-center mb-12">Experience</h2>
         <div class="space-y-12">
@@ -95,11 +127,11 @@
                 <h3 class="text-2xl font-semibold">Senior Software Engineer (Fintech Specialist)</h3>
                 <p class="text-gray-600 mb-3">Softrobotics Bangladesh Limited | Jan 2021 – Present</p>
                 <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    <li>Architected scalable fintech platforms with Laravel</li>
-                    <li>Integrated Stripe, PayPal, and multiple global payment gateways</li>
-                    <li>Built high-performance RESTful APIs for B2B/B2C platforms</li>
+                    <li>Architected global fintech platforms handling millions of transactions</li>
+                    <li>Integrated Stripe, PayPal, and multi-country payment gateways</li>
+                    <li>Developed high-performance RESTful APIs for B2B & B2C platforms</li>
                     <li>Implemented PCI-compliant security & tokenization</li>
-                    <li>Mentored junior developers & improved code quality</li>
+                    <li>Mentored team members & improved code quality</li>
                 </ul>
             </div>
 
@@ -109,7 +141,7 @@
                 <p class="text-gray-600 mb-3">SYNCHRONOISE IT | Nov 2019 – Apr 2020</p>
                 <ul class="list-disc list-inside text-gray-700 space-y-1">
                     <li>Developed e-commerce applications with Laravel & CodeIgniter</li>
-                    <li>Built stock management systems</li>
+                    <li>Built stock management and payment modules</li>
                 </ul>
             </div>
         </div>
@@ -117,49 +149,43 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="py-20 bg-gray-100">
+<section id="projects" class="py-20 bg-gray-100" data-aos="fade-up">
     <div class="container mx-auto px-6 max-w-6xl">
         <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
-                <img src="images/denizpay.png" class="w-full h-64 object-cover" alt="DenizPay">
-                <div class="p-4 text-center">
-                    <h3 class="font-semibold text-xl mb-2">DenizPay</h3>
-                    <a href="https://www.denizpay.com" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded hover:bg-yellow-500">Visit</a>
-                </div>
+            <div class="glass-card overflow-hidden text-center p-4">
+                <img src="assets/img/portfolio/sipay.png" class="w-full h-64 object-cover rounded" alt="DenizPay">
+                <h3 class="font-semibold text-xl mt-4 mb-2">DenizPay</h3>
+                <a href="https://www.denizpay.com" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded hover:bg-yellow-500 transition">Visit</a>
             </div>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
-                <img src="assets/img/portfolio/sipay.png" class="w-full h-64 object-cover" alt="Sipay">
-                <div class="p-4 text-center">
-                    <h3 class="font-semibold text-xl mb-2">Sipay</h3>
-                    <a href="https://sipay.com.tr/en" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded hover:bg-yellow-500">Visit</a>
-                </div>
+            <div class="glass-card overflow-hidden text-center p-4">
+                <img src="assets/img/portfolio/sipay.png" class="w-full h-64 object-cover rounded" alt="Sipay">
+                <h3 class="font-semibold text-xl mt-4 mb-2">Sipay</h3>
+                <a href="https://sipay.com.tr/en" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded hover:bg-yellow-500 transition">Visit</a>
             </div>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
-                <img src="images/parolapara.png" class="w-full h-64 object-cover" alt="ParolaPara">
-                <div class="p-4 text-center">
-                    <h3 class="font-semibold text-xl mb-2">ParolaPara</h3>
-                    <a href="https://parolapara.com" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded hover:bg-yellow-500">Visit</a>
-                </div>
+            <div class="glass-card overflow-hidden text-center p-4">
+                <img src="assets/img/portfolio/sipay.png" class="w-full h-64 object-cover rounded" alt="ParolaPara">
+                <h3 class="font-semibold text-xl mt-4 mb-2">ParolaPara</h3>
+                <a href="https://parolapara.com" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded hover:bg-yellow-500 transition">Visit</a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- CERTIFICATES -->
-<section id="certificates" class="py-20">
+<section id="certificates" class="py-20" data-aos="fade-up">
     <div class="container mx-auto px-6 max-w-6xl">
         <h2 class="text-4xl font-bold text-center mb-12">Certificates</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform text-center p-4">
+            <div class="glass-card overflow-hidden text-center p-4">
                 <img src="assets/img/php-laravel.jpg" class="w-full h-52 object-cover rounded" alt="PHP Laravel">
                 <h4 class="mt-4 font-semibold">PHP Development - LICT</h4>
             </div>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform text-center p-4">
+            <div class="glass-card overflow-hidden text-center p-4">
                 <img src="assets/img/mobile-app.jpg" class="w-full h-52 object-cover rounded" alt="Java Mobile">
                 <h4 class="mt-4 font-semibold">Java Mobile App</h4>
             </div>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform text-center p-4">
+            <div class="glass-card overflow-hidden text-center p-4">
                 <img src="assets/img/dot-net.jpg" class="w-full h-52 object-cover rounded" alt=".NET">
                 <h4 class="mt-4 font-semibold">C# .NET - BITM</h4>
             </div>
@@ -167,52 +193,54 @@
     </div>
 </section>
 
-<!-- PAYMENTS -->
-<section id="payments" class="py-20 bg-gray-100 text-center">
-    <div class="container mx-auto px-6 max-w-5xl">
-        <h2 class="text-4xl font-bold mb-12">Bank & Payment Integrations</h2>
-        <div class="flex flex-wrap justify-center gap-4">
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">NestPay</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">DenizBank</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">VakıfBank</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">Albaraka Türk</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">MSU</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">Yapı ve Kredi</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">Alternatif Bank</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">QNB Finansbank</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">Garanti BBVA</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">Kuveyt Türk</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">QIWI</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">Paymix</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">Paypal</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">Stripe</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">BKM</span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full">Craftgate</span>
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-20 bg-gray-100" data-aos="fade-up">
+    <div class="container mx-auto px-6 max-w-5xl text-center">
+        <h2 class="text-4xl font-bold mb-12">Testimonials</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-6">
+                <p class="text-gray-700 mb-4">"Kamrul is an exceptional software engineer with deep knowledge in fintech APIs. Highly recommended for global projects."</p>
+                <h4 class="font-semibold">John Doe</h4>
+                <p class="text-gray-500 text-sm">CTO, FinTech Global</p>
+            </div>
+            <div class="glass-card p-6">
+                <p class="text-gray-700 mb-4">"He brings strong architecture skills and is excellent at mentoring junior developers."</p>
+                <h4 class="font-semibold">Jane Smith</h4>
+                <p class="text-gray-500 text-sm">Lead Developer, Payment Solutions Inc.</p>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 bg-gray-50 text-center">
+<section id="contact" class="py-20 text-center" data-aos="fade-up">
     <div class="container mx-auto px-6 max-w-3xl">
         <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
-        <p class="text-gray-700 mb-4">Reach out for collaborations, projects, or job opportunities.</p>
+        <p class="text-gray-700 mb-4">For collaborations, freelance projects, or international opportunities.</p>
         <p class="text-gray-700 mb-4">
             <strong>Email:</strong> <a href="mailto:kamrulhasancse15@outlook.com" class="text-yellow-400">kamrulhasancse15@outlook.com</a> |
             <strong>Phone:</strong> +880 1571771357 |
             <strong>Location:</strong> Chattogram, Bangladesh
         </p>
         <div class="flex justify-center gap-4">
-            <a href="https://github.com/KamrulHasanTanvir" class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/kamrul-hasan-tanvir-51bb90136/" class="px-4 py-2 bg-blue-700 text-white rounded hover:bg-blue-600 transition" target="_blank">LinkedIn</a>
+            <a href="https://github.com/KamrulHasanTanvir" class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/kamrul-hasan-tanvir-51bb90136/" class="px-4 py-2 bg-blue-700 text-white rounded hover:bg-blue-600 transition" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         </div>
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="bg-gray-900 text-white text-center py-6">
-    <p>© 2026 Md. Kamrul Hasan</p>
+    <p class="mb-4">© 2026 Md. Kamrul Hasan | Senior Software Engineer</p>
+    <div class="flex justify-center gap-4">
+        <a href="https://github.com/KamrulHasanTanvir" class="hover:text-yellow-400 transition"><i class="fab fa-github fa-lg"></i></a>
+        <a href="https://www.linkedin.com/in/kamrul-hasan-tanvir-51bb90136/" class="hover:text-blue-500 transition"><i class="fab fa-linkedin fa-lg"></i></a>
+    </div>
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ once: true, duration: 1000 });
+</script>
 </body>
 </html>
