@@ -23,6 +23,7 @@
         html {
             scroll-behavior: smooth;
         }
+
         /* Gradient animation */
         .animate-bg {
             background: linear-gradient(270deg, #4f46e5, #9333ea, #ec4899);
@@ -173,40 +174,46 @@
 <div class="md:ml-64">
 
     <!-- HERO -->
+    <!-- HERO -->
     <section id="hero"
-             class="h-screen flex flex-col justify-center items-center text-center text-white animate-bg relative px-4 overflow-visible">
-        <!-- Profile Image with Pulse -->
-        <div class="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center">
-            <!-- Pulse Circle -->
-            <span class="absolute inset-0 rounded-full border-2 border-white opacity-30 animate-pulse z-0"></span>
+             class="h-screen flex items-center justify-center text-white bg-gradient-to-r from-purple-700 via-purple-600 to-purple-800">
+
+        <div class="text-center">
 
             <!-- Profile Image -->
-            <div class="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
+            <div class="w-36 h-36 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <img src="assets/img/portfolio/kamrul-hasan-tanvir.JPG"
                      alt="Md. Kamrul Hasan"
-                     class="w-full h-full object-contain object-center">
+                     class="w-full h-full object-cover">
             </div>
+
+            <!-- Name -->
+            <h1 class="text-4xl md:text-5xl font-bold mt-6">
+                Md. Kamrul Hasan
+            </h1>
+
+            <!-- Typing Role -->
+            <h2 class="text-lg md:text-2xl mt-3 text-gray-200">
+                <span id="typed"></span>
+            </h2>
+
+            <!-- Buttons -->
+            <div class="mt-8 flex justify-center gap-4 flex-wrap">
+
+                <a href="#projects"
+                   class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition transform hover:-translate-y-1">
+                    Fintech App
+                </a>
+
+                <a href="assets/img/kamrulHasanTanvir.pdf"
+                   class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition transform hover:-translate-y-1">
+                    Download CV
+                </a>
+
+            </div>
+
         </div>
 
-        <!-- Name -->
-        <h1 class="text-4xl md:text-6xl font-bold mt-6 tracking-tight relative z-20">Md. Kamrul Hasan</h1>
-
-        <!-- Dynamic Role -->
-        <h2 class="text-lg md:text-2xl mt-3 text-gray-100 relative z-20">
-            <span id="typed"></span>
-        </h2>
-
-        <!-- Action Buttons -->
-        <div class="mt-8 flex flex-col sm:flex-row gap-4 relative z-20">
-            <a href="#projects"
-               class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition transform hover:-translate-y-1">
-                Projects
-            </a>
-            <a href="assets/img/kamrulHasanTanvir.pdf"
-               class="border border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition transform hover:-translate-y-1">
-                Download CV
-            </a>
-        </div>
     </section>
 
     <!-- ABOUT -->
@@ -331,6 +338,7 @@
                 <ul class="space-y-2 text-gray-600">
                     <li>PHP</li>
                     <li>JavaScript</li>
+                    <li>Jquery</li>
                 </ul>
             </div>
 
@@ -339,6 +347,8 @@
                 <h3 class="font-semibold text-lg mb-4 text-gray-800">Frameworks</h3>
                 <ul class="space-y-2 text-gray-600">
                     <li>Laravel</li>
+                    <li>React(Base)</li>
+                    <li>Vue(Base)</li>
                 </ul>
             </div>
 
@@ -348,6 +358,8 @@
                 <ul class="space-y-2 text-gray-600">
                     <li>MySQL</li>
                     <li>PostgreSQL</li>
+                    <li>Microsoft SQL Server</li>
+                    <li>Redis (Cache)</li>
                 </ul>
             </div>
 
@@ -357,6 +369,7 @@
                 <ul class="space-y-2 text-gray-600">
                     <li>Docker (Basic)</li>
                     <li>SonarQube</li>
+                    <li>Linux</li>
                 </ul>
             </div>
 
@@ -368,6 +381,7 @@
                     <li>GitHub</li>
                     <li>GitLab</li>
                     <li>Postman</li>
+                    <li>Jira/Trello</li>
                 </ul>
             </div>
 
@@ -380,35 +394,41 @@
         <div class="grid md:grid-cols-3 gap-10 px-6 max-w-6xl mx-auto">
 
             <!-- Project 1 -->
-            <div class="glass p-6 rounded-xl hover:shadow-xl transition transform hover:scale-105 duration-300">
-                <div class="overflow-hidden rounded-lg">
-                    <img src="assets/img/portfolio/sipay.png" alt="DenizPay"
-                         class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
+            <a href="https://sipay.com.tr/" target="_blank">
+                <div class="glass p-6 rounded-xl hover:shadow-xl transition transform hover:scale-105 duration-300">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="assets/img/portfolio/sipay.png" alt="SIPAY"
+                             class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="mt-4 font-semibold text-lg text-gray-800">SIPAY</h3>
+                    <p class="text-gray-500 text-sm mt-1">Sipay is a Turkish fintech platform offering digital payment
+                        solutions...</p>
                 </div>
-                <h3 class="mt-4 font-semibold text-lg text-gray-800">DenizPay</h3>
-                <p class="text-gray-500 text-sm mt-1">Fintech payment gateway solution with high transaction
-                    security.</p>
-            </div>
+            </a>
 
             <!-- Project 2 -->
-            <div class="glass p-6 rounded-xl hover:shadow-xl transition transform hover:scale-105 duration-300">
-                <div class="overflow-hidden rounded-lg">
-                    <img src="assets/img/portfolio/sipay.png" alt="Sipay"
-                         class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
+            <a href="https://papel.com.tr/" target="_blank">
+                <div class="glass p-6 rounded-xl hover:shadow-xl transition transform hover:scale-105 duration-300">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="assets/img/portfolio/papel.png" alt="PAPEL"
+                             class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="mt-4 font-semibold text-lg text-gray-800">PAPEL</h3>
+                    <p class="text-gray-500 text-sm mt-1">Papel is a digital financial platform in Turkey...</p>
                 </div>
-                <h3 class="mt-4 font-semibold text-lg text-gray-800">Sipay</h3>
-                <p class="text-gray-500 text-sm mt-1">Secure online payment system for B2B and B2C clients.</p>
-            </div>
+            </a>
 
             <!-- Project 3 -->
-            <div class="glass p-6 rounded-xl hover:shadow-xl transition transform hover:scale-105 duration-300">
-                <div class="overflow-hidden rounded-lg">
-                    <img src="assets/img/portfolio/sipay.png" alt="ParolaPara"
-                         class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
+            <a href="https://www.denizpay.com/" target="_blank">
+                <div class="glass p-6 rounded-xl hover:shadow-xl transition transform hover:scale-105 duration-300">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="assets/img/portfolio/deniz.png" alt="DENIZ PAY"
+                             class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="mt-4 font-semibold text-lg text-gray-800">DENIZ PAY</h3>
+                    <p class="text-gray-500 text-sm mt-1">DenizPay is a mobile wallet by DenizBank...</p>
                 </div>
-                <h3 class="mt-4 font-semibold text-lg text-gray-800">ParolaPara</h3>
-                <p class="text-gray-500 text-sm mt-1">Password & credential management system with encryption.</p>
-            </div>
+            </a>
 
         </div>
     </section>
@@ -423,7 +443,8 @@
                 <div class="group glass p-6 rounded-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-500">
                     <div class="overflow-hidden rounded-lg">
                         <img src="assets/img/php-laravel.jpg" alt="PHP Development"
-                             class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                             onclick="openLightbox(this.src)"
+                             class="w-full h-56 object-cover cursor-pointer transform group-hover:scale-105 transition duration-500">
                     </div>
                     <h3 class="mt-4 font-semibold text-lg text-gray-900">PHP Development</h3>
                     <p class="text-gray-500 text-sm mt-1">LICT Program</p>
@@ -433,7 +454,8 @@
                 <div class="group glass p-6 rounded-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-500">
                     <div class="overflow-hidden rounded-lg">
                         <img src="assets/img/mobile-app.jpg" alt="Java Mobile App"
-                             class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                             onclick="openLightbox(this.src)"
+                             class="w-full h-56 object-cover cursor-pointer transform group-hover:scale-105 transition duration-500">
                     </div>
                     <h3 class="mt-4 font-semibold text-lg text-gray-900">Java Mobile App</h3>
                     <p class="text-gray-500 text-sm mt-1">Android Development</p>
@@ -443,7 +465,8 @@
                 <div class="group glass p-6 rounded-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-500">
                     <div class="overflow-hidden rounded-lg">
                         <img src="assets/img/dot-net.jpg" alt="C# .NET"
-                             class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                             onclick="openLightbox(this.src)"
+                             class="w-full h-56 object-cover cursor-pointer transform group-hover:scale-105 transition duration-500">
                     </div>
                     <h3 class="mt-4 font-semibold text-lg text-gray-900">C# .NET</h3>
                     <p class="text-gray-500 text-sm mt-1">BITM Training</p>
@@ -452,6 +475,18 @@
             </div>
         </div>
     </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+
+        <!-- Close Button -->
+        <button onclick="closeLightbox()"
+                class="absolute top-6 right-6 text-white text-3xl font-bold hover:text-red-400 transition">
+            &times;
+        </button>
+
+        <img id="lightbox-img" class="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl">
+    </div>
 
 
     <!-- CONTACT -->
@@ -530,7 +565,8 @@
             <div class="flex gap-4 text-lg">
                 <a href="https://gitlab.com/KamrulHasanTanvir" target="_blank" class="hover:text-gray-300 transition"><i
                         class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kamrul-hasan-tanvir-51bb90136" target="_blank" class="hover:text-gray-300 transition"><i
+                <a href="https://www.linkedin.com/in/kamrul-hasan-tanvir-51bb90136" target="_blank"
+                   class="hover:text-gray-300 transition"><i
                         class="fab fa-linkedin"></i></a>
                 <a href="mailto:kamrulhasancse15@outlook.com" class="hover:text-gray-300 transition"><i
                         class="fa-regular fa-envelope"></i></a>
@@ -561,6 +597,30 @@
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebarToggle');
     sidebarToggle.addEventListener('click', () => sidebar.classList.toggle('hidden'));
+
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+
+        img.src = src;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+    }
+
+    // optional: click background to close
+    document.getElementById('lightbox').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+
+    
 </script>
 </body>
 </html>
